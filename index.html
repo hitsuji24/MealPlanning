@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="./js/main.js"></script>
 
     <title>Document</title>
 </head>
@@ -18,42 +17,51 @@
 
     <div class="nutrientsInput">
         <p>1日あたりの目標摂取量を教えてください</p>
-        <form action="">
-            <div class="carbs">
+        <form id="nutrientsForm">
+            <div class="protein">
                 <p>プロテイン</p>
-                <label for="minProtein">最低数値(g)</label>
-                <input type="number">
-                <label for="maxProtein	">最大数値(g)</label>
-                <input type="number">
-                <p>脂質</p>
-                <label for="mminFat">最低数値(g)</label>
-                <input type="number">
-                <label for="maxFat">最大数値(g)</label>
-                <input type="number">
-                <p>炭水化物</p>
-                <label for="minCarbs">最低数値(g)</label>
-                <input type="number">
-                <label for="maxCarbs">最大数値(g)</label>
-                <input type="number">
-                <p>カロリー</p>
-                <label for="minCalories">最低数値(g)</label>
-                <input type="number">
-                <label for="maxCalories	">最大数値(g)</label>
-                <input type="number">
+                <label for="minProtein">最低値(g)</label>
+                <input type="number" id="minProtein">
+                <label for="maxProtein	">最大値(g)</label>
+                <input type="number" id="maxProtein">
             </div>
+            <div class="fat">
+                <p>脂質</p>
+                <label for="mminFat">最低値(g)</label>
+                <input type="number" id="minFat">
+                <label for="maxFat">最大値(g)</label>
+                <input type="number" id="maxFat">
+            </div>
+            <div class="carbs">
+                <p>炭水化物</p>
+                <label for="minCarbs">最低値(g)</label>
+                <input type="number" id="minCarbs">
+                <label for="maxCarbs">最大値(g)</label>
+                <input type="number" id="maxCarbs">
+            </div>
+            <div class="calories">
+                <p>カロリー</p>
+                <label for="minCalories">最低値(g)</label>
+                <input type="number" id="minCalories">
+                <label for="maxCalories	">最大値(g)</label>
+                <input type="number" id="maxCalories">
+            </div>
+            <button type="submit">レシピを検索</button>
         </form>
     </div>
 
-<div class="mealPlan">
-<div class="mondayPlan"></div>
-<div class="tuesdayPlan"></div>
-<div class="wednesdayPlan"></div>
-<div class="thursdayPlan"></div>
-<div class="fridayPlan"></div>
-<div class="saturdayPlan"></div>
-<div class="sundayPlan"></div>
-</div>
+    <div class="mealPlan">
+        <div class="mondayPlan"></div>
+        <div class="tuesdayPlan"></div>
+        <div class="wednesdayPlan"></div>
+        <div class="thursdayPlan"></div>
+        <div class="fridayPlan"></div>
+        <div class="saturdayPlan"></div>
+        <div class="sundayPlan"></div>
+    </div>
 
+    
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
