@@ -62,7 +62,7 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
     //                 <p>Fat: ${recipe.fat}</p>
     //                 <p>Protein: ${recipe.protein}</p>
     //             `;
-    //                 document.querySelector(`.${day}${mealTime}`).appendChild(recipeElement);
+    //                 document.getElementById(`${day}${mealTime}`).appendChild(recipeElement);
     //             });
     //         })
     //         .catch(error => console.error('Error:', error));
@@ -293,24 +293,23 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
     // ダミーデータを使って表示
     function displayDummyMeals(dummyRecipes, mealType) {
         dummyRecipes.forEach((recipe, index) => {
-            const day = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'][index];
-            const mealTime = ['Morning', 'Lunch', 'Dinner'][index % 3];
-
+            const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'][index];
+            const mealTime = mealType;
             const recipeElement = document.createElement('div');
             recipeElement.innerHTML = `
-                <h3>${day.toUpperCase()}: ${recipe.title}</h3>
+                <h3> ${recipe.title}</h3>
                 <img src="${recipe.image}" alt="${recipe.title}">
-                <p>Calories: ${recipe.calories}</p>
-                <p>Carbs: ${recipe.carbs}</p>
-                <p>Fat: ${recipe.fat}</p>
                 <p>Protein: ${recipe.protein}</p>
+                <p>Fat: ${recipe.fat}</p>
+                <p>Carbs: ${recipe.carbs}</p>
+                <p>Calories: ${recipe.calories}</p>
             `;
-            document.querySelector(`.${day}${mealTime}`).appendChild(recipeElement);
+            document.getElementById(`${days}${mealTime}`).appendChild(recipeElement);
         });
     }
     // 表示
-    displayDummyMeals(dummyRecipesBreakfast, 'breakfast');
-    displayDummyMeals(dummyRecipesLunch, 'lunch');
-    displayDummyMeals(dummyRecipesDinner, 'dinner');
+    displayDummyMeals(dummyRecipesBreakfast, 'Breakfast');
+    displayDummyMeals(dummyRecipesLunch, 'Lunch');
+    displayDummyMeals(dummyRecipesDinner, 'Dinner');
 
 });
