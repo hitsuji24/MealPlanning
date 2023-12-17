@@ -23,13 +23,36 @@ button {
     outline: none;
 }
 
+#mealPlan {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 .mealCard {
     margin: 1rem auto;
-    width: 95%;
+    width: 200px;
+    background-color:aquamarine ;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;
 }
 
 .mealCard :hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
     transition: all .5s;
+}
+
+.mealCard h3 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.mealCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
