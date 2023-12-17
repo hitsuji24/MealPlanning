@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/main.js"></script>
+
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <h1>1週間分の献立プランニング</h1>
+    </header>
+
+    <div class="nutrientsInput">
+        <p>1日あたりの目標摂取量を教えてください</p>
+        <form action="">
+            <div class="carbs">
+                <p>プロテイン</p>
+                <label for="minProtein">最低数値(g)</label>
+                <input type="number">
+                <label for="maxProtein	">最大数値(g)</label>
+                <input type="number">
+                <p>脂質</p>
+                <label for="mminFat">最低数値(g)</label>
+                <input type="number">
+                <label for="maxFat">最大数値(g)</label>
+                <input type="number">
+                <p>炭水化物</p>
+                <label for="minCarbs">最低数値(g)</label>
+                <input type="number">
+                <label for="maxCarbs">最大数値(g)</label>
+                <input type="number">
+                <p>カロリー</p>
+                <label for="minCalories">最低数値(g)</label>
+                <input type="number">
+                <label for="maxCalories	">最大数値(g)</label>
+                <input type="number">
+            </div>
+        </form>
+    </div>
+
+<div class="mealPlan">
+<div class="mondayPlan"></div>
+<div class="tuesdayPlan"></div>
+<div class="wednesdayPlan"></div>
+<div class="thursdayPlan"></div>
+<div class="fridayPlan"></div>
+<div class="saturdayPlan"></div>
+<div class="sundayPlan"></div>
+</div>
+
 </body>
+
 </html>
