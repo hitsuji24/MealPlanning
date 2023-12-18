@@ -292,6 +292,7 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
     ]
     // ダミーデータを使って表示
     function displayDummyMeals(dummyRecipes, mealType) {
+
         dummyRecipes.forEach((recipe, index) => {
             const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'][index];
             const mealTime = mealType;
@@ -304,6 +305,13 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
                 <p>Carbs: ${recipe.carbs}</p>
                 <p>Calories: ${recipe.calories}</p>
             `;
+
+            // クリックして各レシピの詳細ページを表示
+            recipeElement.addEventListener('click', () => {
+                // 別ウィンドウで表示する場合
+                window.open(`https://spoonacular.com/recipes/${recipe.title}-${recipe.id}`, '_blank');
+            });
+
             document.getElementById(`${days}${mealTime}`).appendChild(recipeElement);
         });
     }

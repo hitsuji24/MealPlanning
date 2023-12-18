@@ -6,9 +6,18 @@
     text-decoration-skip-ink: none;
 }
 
+header {
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: rgb(11, 114, 109);
+    color: #fff;
+}
+
 #nutrientsInput {
-    width: 100%;
-    margin: 16px 16px;
+    width: 95%;
+    margin: auto;
     /* TODO スクロールの表示部分を加味して余白を作って欲しい */
 }
 
@@ -52,11 +61,15 @@ button {
     outline: none;
 }
 
-/* 結果の表全体。FlexboxはmealTimeLabelsとmealPlanWrapperに対して指示*/
+/* 結果の表全体。*/
+/* ? なぜ日曜日分の横に余白ができるのか そして横幅がうまく縮小しない */
 #mealPlanContainer {
+    /* FlexboxはmealTimeLabelsとmealPlanWrapperに対して指示 */
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    padding: 16px 0;
 }
 
 /* 朝昼晩のラベル */
@@ -72,8 +85,9 @@ button {
 }
 
 
-/* 曜日と各レシピ。横並びにさせるやつ */
+/* 曜日と各レシピ。 */
 #mealPlanWrapper {
+    /* ラベルとして曜日を上に乗せるために、レシピ群と縦に並ばせる */
     display: flex;
     flex-direction: column;
 }
@@ -88,8 +102,9 @@ button {
     margin: 8px 0;
 }
 
-/* 1週間分のレシピが入っているやつ */
+/* 1週間分のレシピが入っているやつ 。*/
 #mealPlan {
+    /* 曜日ごとのレシピ群を横並びさせる */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -97,9 +112,13 @@ button {
 
 }
 
-/* 曜日ごとの献立が入っているやつ */
+/* 曜日ごとの献立が入っているやつ。*/
 .dayPlan {
-    width: 14%;
+    /* 朝昼晩のレシピを縦に並べる */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 各dayPlanが利用可能なスペースを均等に埋める */
+    min-width: 100px; /* 最小幅を設定 */
 }
 
 /* 1日分のレシピが入っているやつ */
@@ -123,7 +142,7 @@ button {
     text-overflow: ellipsis;
 }
 
-.mealCard p{
+.mealCard p {
     margin: 4px 8px;
     font-size: 12px;
     font-weight: 800;
