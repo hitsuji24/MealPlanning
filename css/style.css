@@ -122,6 +122,7 @@ button {
 }
 
 /* 1日分のレシピが入っているやつ */
+/* TODO カードぽい見た目にする */
 .mealCard {
     background-color: aquamarine;
     border-radius: 5px;

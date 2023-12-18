@@ -1,6 +1,7 @@
 document.getElementById('nutrientsForm').addEventListener('submit', function (event) {
     event.preventDefault(); // フォームのデフォルトの送信を防ぐ
 
+
     //* 入力値を取得
     const minProtein = document.getElementById('minProtein').value;
     const maxProtein = document.getElementById('maxProtein').value;
@@ -292,7 +293,17 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
     ]
     // ダミーデータを使って表示
     function displayDummyMeals(dummyRecipes, mealType) {
+        // すべてのdayPlanの内容をクリア
+        const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        days.forEach(day => {
+            const dayPlanId = `${day}${mealType}`;
+            const dayPlanElement = document.getElementById(dayPlanId);
+            if (dayPlanElement) {
+                dayPlanElement.innerHTML = ''; // 既存のコンテンツをクリア
+            }
+        });
 
+        // ダミーデータを表示
         dummyRecipes.forEach((recipe, index) => {
             const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'][index];
             const mealTime = mealType;
