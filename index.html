@@ -18,67 +18,94 @@
     <div id="nutrientsInput">
         <p>1日あたりの目標摂取量を教えてください</p>
         <form id="nutrientsForm">
-            <div class="nutInput" id="protein">
-                <p>プロテイン</p>
-                <label for="minProtein">最低値(g)</label>
-                <input type="number" id="minProtein">
-                <label for="maxProtein	">最大値(g)</label>
-                <input type="number" id="maxProtein">
-            </div>
-            <div class="nutInput" id="fat">
-                <p>脂質</p>
-                <label for="mminFat">最低値(g)</label>
-                <input type="number" id="minFat">
-                <label for="maxFat">最大値(g)</label>
-                <input type="number" id="maxFat">
-            </div>
-            <div class="nutInput" id="carbs">
-                <p>炭水化物</p>
-                <label for="minCarbs">最低値(g)</label>
-                <input type="number" id="minCarbs">
-                <label for="maxCarbs">最大値(g)</label>
-                <input type="number" id="maxCarbs">
-            </div>
-            <div class="nutInput" id="calories">
-                <p>カロリー</p>
-                <label for="minCalories">最低値(g)</label>
-                <input type="number" id="minCalories">
-                <label for="maxCalories	">最大値(g)</label>
-                <input type="number" id="maxCalories">
+            <div class="nutInputWrap">
+                <div class="nutInput" id="protein">
+                    <p>プロテイン</p>
+                    <label for="minProtein">最低値(g)</label>
+                    <input type="number" id="minProtein"><br>
+                    <label for="maxProtein	">最大値(g)</label>
+                    <input type="number" id="maxProtein">
+                </div>
+                <div class="nutInput" id="fat">
+                    <p>脂質</p>
+                    <label for="mminFat">最低値(g)</label>
+                    <input type="number" id="minFat"><br>
+                    <label for="maxFat">最大値(g)</label>
+                    <input type="number" id="maxFat">
+                </div>
+                <div class="nutInput" id="carbs">
+                    <p>炭水化物</p>
+                    <label for="minCarbs">最低値(g)</label>
+                    <input type="number" id="minCarbs"><br>
+                    <label for="maxCarbs">最大値(g)</label>
+                    <input type="number" id="maxCarbs">
+                </div>
+                <div class="nutInput" id="calories">
+                    <p>カロリー</p>
+                    <label for="minCalories">最低値(g)</label>
+                    <input type="number" id="minCalories"><br>
+                    <label for="maxCalories	">最大値(g)</label>
+                    <input type="number" id="maxCalories">
+                </div>
             </div>
             <button type="submit">レシピを検索</button>
         </form>
     </div>
 
-    <div id="mealPlan">
-        <div class="dayPlan" id="mondayPlan"></div>
-            <div class="mealCard" id="mondayBreakfast"></div>
-            <div class="mealCard" id="mondayLunch"></div>
-            <div class="mealCard" id="mondayDinner"></div>
-        <div class="dayPlan" id="tuesdayPlan"></div>
-            <div class="mealCard" id="tuesdayBreakfast"></div>
-            <div class="mealCard" id="tuesdayLunch"></div>
-            <div class="mealCard" id="tuesdayDinner"></div>
-        <div class="dayPlan" id="wednesdayPlan"></div>
-            <div class="mealCard" id="wednesdayBreakfast"></div>
-            <div class="mealCard" id="wednesdayLunch"></div>
-            <div class="mealCard" id="wednesdayDinner"></div>
-        <div class="dayPlan" id="thursdayPlan"></div>
-            <div class="mealCard" id="thursdayBreakfast"></div>
-            <div class="mealCard" id="thursdayLunch"></div>
-            <div class="mealCard" id="thursdayDinner"></div>
-        <div class="dayPlan" id="fridayPlan"></div>
-            <div class="mealCard" id="fridayBreakfast"></div>
-            <div class="mealCard" id="fridayLunch"></div>
-            <div class="mealCard" id="fridayDinner"></div>
-        <div class="dayPlan" id="saturdayPlan"></div>
-            <div class="mealCard" id="saturdayBreakfast"></div>
-            <div class="mealCard" id="saturdayLunch"></div>
-            <div class="mealCard" id="saturdayDinner"></div>
-        <div class="dayPlan" id="sundayPlan"></div>
-            <div class="mealCard" id="sundayBreakfast"></div>
-            <div class="mealCard" id="sundayLunch"></div>
-            <div class="mealCard" id="sundayDinner"></div>
+    <div id="mealPlanContainer">
+        <div class="mealTimeLabels">
+            <div>朝</div>
+            <div>昼</div>
+            <div>晩</div>
+        </div>
+        <div id="mealPlanWrapper">
+            <div class="dayLabels">
+                <div>月</div>
+                <div>火</div>
+                <div>水</div>
+                <div>木</div>
+                <div>金</div>
+                <div>土</div>
+                <div>日</div>
+            </div>
+            <div id="mealPlan">
+                <div class="dayPlan" id="mondayPlan">
+                    <div class="mealCard" id="mondayBreakfast"></div>
+                    <div class="mealCard" id="mondayLunch"></div>
+                    <div class="mealCard" id="mondayDinner"></div>
+                </div>
+                <div class="dayPlan" id="tuesdayPlan">
+                    <div class="mealCard" id="tuesdayBreakfast"></div>
+                    <div class="mealCard" id="tuesdayLunch"></div>
+                    <div class="mealCard" id="tuesdayDinner"></div>
+                </div>
+                <div class="dayPlan" id="wednesdayPlan">
+                    <div class="mealCard" id="wednesdayBreakfast"></div>
+                    <div class="mealCard" id="wednesdayLunch"></div>
+                    <div class="mealCard" id="wednesdayDinner"></div>
+                </div>
+                <div class="dayPlan" id="thursdayPlan">
+                    <div class="mealCard" id="thursdayBreakfast"></div>
+                    <div class="mealCard" id="thursdayLunch"></div>
+                    <div class="mealCard" id="thursdayDinner"></div>
+                </div>
+                <div class="dayPlan" id="fridayPlan">
+                    <div class="mealCard" id="fridayBreakfast"></div>
+                    <div class="mealCard" id="fridayLunch"></div>
+                    <div class="mealCard" id="fridayDinner"></div>
+                </div>
+                <div class="dayPlan" id="saturdayPlan">
+                    <div class="mealCard" id="saturdayBreakfast"></div>
+                    <div class="mealCard" id="saturdayLunch"></div>
+                    <div class="mealCard" id="saturdayDinner"></div>
+                </div>
+                <div class="dayPlan" id="sundayPlan">
+                    <div class="mealCard" id="sundayBreakfast"></div>
+                    <div class="mealCard" id="sundayLunch"></div>
+                    <div class="mealCard" id="sundayDinner"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
