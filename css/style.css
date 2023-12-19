@@ -63,13 +63,15 @@ button {
 
 /* 結果の表全体。*/
 /* ? なぜ日曜日分の横に余白ができるのか そして横幅がうまく縮小しない */
+/* →なぜか朝昼晩のラベル分の箱が右側にできてた。こういう作りのときはGridが向いているらしい */
+/* 若干考えるのが難しかったので、ラベルもレシピの一つの列として対応 */
+
+/* 結果部分全体に対してのやつ */
 #mealPlanContainer {
-    /* FlexboxはmealTimeLabelsとmealPlanWrapperに対して指示 */
+    /* Flexboxは朝昼晩ラベル含めた縦長の箱に対して指示 */
     display: flex;
     flex-direction: row;
     width: 95%;
-    margin: auto;
-    padding: 16px 0;
 }
 
 /* 朝昼晩のラベル */
@@ -89,12 +91,12 @@ button {
 #mealPlanWrapper {
     /* ラベルとして曜日を上に乗せるために、レシピ群と縦に並ばせる */
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    width: 95%;
 }
 
 /* 曜日のラベル */
-.dayLabels {
+.dayLabel {
     display: flex;
     justify-content: space-around;
     font-size: 18px;
@@ -103,23 +105,11 @@ button {
     margin: 8px 0;
 }
 
-/* 1週間分のレシピが入っているやつ 。*/
-#mealPlan {
-    /* 曜日ごとのレシピ群を横並びさせる */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 8px;
-
-}
-
 /* 曜日ごとの献立が入っているやつ。*/
 .dayPlan {
     /* 朝昼晩のレシピを縦に並べる */
     display: flex;
     flex-direction: column;
-    flex: 1; /* 各dayPlanが利用可能なスペースを均等に埋める */
-    min-width: 59px; /* 最小幅を設定 */
 }
 
 /* 1日分のレシピが入っているやつ */
@@ -127,7 +117,6 @@ button {
 .mealCard {
     background-color: aquamarine;
     border-radius: 5px;
-    padding: 8px 0;
     margin: 8px 0;
 }
 

@@ -15,6 +15,7 @@ document.getElementById('nutrientsForm').addEventListener('submit', function (ev
     //* 1日分の数値を朝昼晩用に分割
     //? リクエストが1ptで結果表示が0.1ptなので費用を安くするためにもっと適した設計ができそう→朝晩をLight,昼をHeavyにするとか。結果を使いまわしするとか。
     //? テスト段階でいっぱいAPI使ってしまうと無料プランの上限にきてしまう。何かいい策はないか？ CSSのためならダミーでレスポンスを飛ばすとか？
+    // →ダミーデータ作るのも手。一回のレスポンスでたくさん検証できるように事前に準備しておく。
     // 分割のための関数
     const calculatePortions = (value) => {
         return {

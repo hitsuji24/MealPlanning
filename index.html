@@ -52,74 +52,62 @@
         </form>
     </div>
 
-    <div id="mealPlanContainer">
-        <!-- 備忘録：朝昼晩ラベルと曜日&献立レシピの箱を作ってFlex指定は作り方として向いていない -->
-        <!-- 備忘録：横幅パーセンテージ指定のとき、marginはいい感じに計算してくれない。100%指定のときにはみ出す可能性あり -->
-        <!-- <div class="mealTimeLabels">
+    <!-- 備忘録：朝昼晩ラベルと曜日&献立レシピの箱を作ってFlex指定は作り方として向いていない -->
+    <!-- 備忘録：横幅パーセンテージ指定のとき、marginはいい感じに計算してくれない。100%指定のときにはみ出す可能性あり -->
+
+    <div id="mealPlanWrapper">
+        <!-- ここに朝昼晩のラベル 一緒に横並びさせたほうが良さそう -->
+        <!-- Display Gridというのがある マスぽくさせるにはFlexboxより使いやすい
+                     横幅に対して相対指定できる
+                     朝昼晩のとこだけピクセル指定して、献立部分は相対指定が良さそう -->
+        <div class="mealTimeLabels">
             <div>朝</div>
             <div>昼</div>
             <div>晩</div>
-        </div> -->
-        <div id="mealPlanWrapper">
-            <div class="dayLabels">
-                <div></div>
-                <div>月</div>
-                <div>火</div>
-                <div>水</div>
-                <div>木</div>
-                <div>金</div>
-                <div>土</div>
-                <div>日</div>
-            </div>
-            <div id="mealPlan">
-                <!-- ここに朝昼晩のラベル 一緒に横並びさせたほうが良さそう -->
-                <!-- Display Gridというのがある マスぽくさせるにはFlexboxより使いやすい
-                     横幅に対して相対指定できる
-                     朝昼晩のとこだけピクセル指定して、献立部分は相対指定が良さそう -->
-                <div class="mealTimeLabels">
-                    <div>朝</div>
-                    <div>昼</div>
-                    <div>晩</div>
-                </div>
-                <div class="dayPlan" id="mondayPlan">
-                    <div class="mealCard" id="mondayBreakfast"></div>
-                    <div class="mealCard" id="mondayLunch"></div>
-                    <div class="mealCard" id="mondayDinner"></div>
-                </div>
-                <div class="dayPlan" id="tuesdayPlan">
-                    <div class="mealCard" id="tuesdayBreakfast"></div>
-                    <div class="mealCard" id="tuesdayLunch"></div>
-                    <div class="mealCard" id="tuesdayDinner"></div>
-                </div>
-                <div class="dayPlan" id="wednesdayPlan">
-                    <div class="mealCard" id="wednesdayBreakfast"></div>
-                    <div class="mealCard" id="wednesdayLunch"></div>
-                    <div class="mealCard" id="wednesdayDinner"></div>
-                </div>
-                <div class="dayPlan" id="thursdayPlan">
-                    <div class="mealCard" id="thursdayBreakfast"></div>
-                    <div class="mealCard" id="thursdayLunch"></div>
-                    <div class="mealCard" id="thursdayDinner"></div>
-                </div>
-                <div class="dayPlan" id="fridayPlan">
-                    <div class="mealCard" id="fridayBreakfast"></div>
-                    <div class="mealCard" id="fridayLunch"></div>
-                    <div class="mealCard" id="fridayDinner"></div>
-                </div>
-                <div class="dayPlan" id="saturdayPlan">
-                    <div class="mealCard" id="saturdayBreakfast"></div>
-                    <div class="mealCard" id="saturdayLunch"></div>
-                    <div class="mealCard" id="saturdayDinner"></div>
-                </div>
-                <div class="dayPlan" id="sundayPlan">
-                    <div class="mealCard" id="sundayBreakfast"></div>
-                    <div class="mealCard" id="sundayLunch"></div>
-                    <div class="mealCard" id="sundayDinner"></div>
-                </div>
-            </div>
+        </div>
+        <div class="dayPlan" id="mondayPlan">
+            <div class="dayLabel">月</div>
+            <div class="mealCard" id="mondayBreakfast"></div>
+            <div class="mealCard" id="mondayLunch"></div>
+            <div class="mealCard" id="mondayDinner"></div>
+        </div>
+        <div class="dayPlan" id="tuesdayPlan">
+            <div class="dayLabel">火</div>
+            <div class="mealCard" id="tuesdayBreakfast"></div>
+            <div class="mealCard" id="tuesdayLunch"></div>
+            <div class="mealCard" id="tuesdayDinner"></div>
+        </div>
+        <div class="dayPlan" id="wednesdayPlan">
+            <div class="dayLabel">水</div>
+            <div class="mealCard" id="wednesdayBreakfast"></div>
+            <div class="mealCard" id="wednesdayLunch"></div>
+            <div class="mealCard" id="wednesdayDinner"></div>
+        </div>
+        <div class="dayPlan" id="thursdayPlan">
+            <div class="dayLabel">木</div>
+            <div class="mealCard" id="thursdayBreakfast"></div>
+            <div class="mealCard" id="thursdayLunch"></div>
+            <div class="mealCard" id="thursdayDinner"></div>
+        </div>
+        <div class="dayPlan" id="fridayPlan">
+            <div class="dayLabel">金</div>
+            <div class="mealCard" id="fridayBreakfast"></div>
+            <div class="mealCard" id="fridayLunch"></div>
+            <div class="mealCard" id="fridayDinner"></div>
+        </div>
+        <div class="dayPlan" id="saturdayPlan">
+            <div class="dayLabel">土</div>
+            <div class="mealCard" id="saturdayBreakfast"></div>
+            <div class="mealCard" id="saturdayLunch"></div>
+            <div class="mealCard" id="saturdayDinner"></div>
+        </div>
+        <div class="dayPlan" id="sundayPlan">
+            <div class="dayLabel">日</div>
+            <div class="mealCard" id="sundayBreakfast"></div>
+            <div class="mealCard" id="sundayLunch"></div>
+            <div class="mealCard" id="sundayDinner"></div>
         </div>
     </div>
-
 
     <script src="./js/main.js"></script>
 </body>
