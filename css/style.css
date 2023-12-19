@@ -90,6 +90,7 @@ button {
     /* ラベルとして曜日を上に乗せるために、レシピ群と縦に並ばせる */
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 /* 曜日のラベル */
@@ -118,7 +119,7 @@ button {
     display: flex;
     flex-direction: column;
     flex: 1; /* 各dayPlanが利用可能なスペースを均等に埋める */
-    min-width: 100px; /* 最小幅を設定 */
+    min-width: 59px; /* 最小幅を設定 */
 }
 
 /* 1日分のレシピが入っているやつ */

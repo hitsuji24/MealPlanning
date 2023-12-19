@@ -53,13 +53,16 @@
     </div>
 
     <div id="mealPlanContainer">
-        <div class="mealTimeLabels">
+        <!-- 備忘録：朝昼晩ラベルと曜日&献立レシピの箱を作ってFlex指定は作り方として向いていない -->
+        <!-- 備忘録：横幅パーセンテージ指定のとき、marginはいい感じに計算してくれない。100%指定のときにはみ出す可能性あり -->
+        <!-- <div class="mealTimeLabels">
             <div>朝</div>
             <div>昼</div>
             <div>晩</div>
-        </div>
+        </div> -->
         <div id="mealPlanWrapper">
             <div class="dayLabels">
+                <div></div>
                 <div>月</div>
                 <div>火</div>
                 <div>水</div>
@@ -69,6 +72,15 @@
                 <div>日</div>
             </div>
             <div id="mealPlan">
+                <!-- ここに朝昼晩のラベル 一緒に横並びさせたほうが良さそう -->
+                <!-- Display Gridというのがある マスぽくさせるにはFlexboxより使いやすい
+                     横幅に対して相対指定できる
+                     朝昼晩のとこだけピクセル指定して、献立部分は相対指定が良さそう -->
+                <div class="mealTimeLabels">
+                    <div>朝</div>
+                    <div>昼</div>
+                    <div>晩</div>
+                </div>
                 <div class="dayPlan" id="mondayPlan">
                     <div class="mealCard" id="mondayBreakfast"></div>
                     <div class="mealCard" id="mondayLunch"></div>
