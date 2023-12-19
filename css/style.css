@@ -1,33 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #eff2f6;
+}
+
+
+.top{
+    width: 95%;
+    margin: 24px 0  16px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+.character img {
+    width: 240px;
+    height: auto;
+}
+
+#nutrientsInput{
+    width: 100%;
+}
+
+.nutInputWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .highlight {
     text-decoration: underline;
     text-decoration-thickness: 0.5em;
     text-decoration-color: rgba(197, 178, 8, 0.4);
     text-underline-offset: -0.2em;
     text-decoration-skip-ink: none;
-}
-
-header {
-    width: 95%;
-    margin: auto;
-    align-items: center;
-    padding: 8px 16px;
-    background-color: rgb(11, 114, 109);
-    color: #fff;
-}
-
-#nutrientsInput {
-    width: 95%;
-    margin: auto;
-    /* TODO スクロールの表示部分を加味して余白を作って欲しい */
-}
-
-.nutInputWrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 16px;
 }
 
 .nutInput {
@@ -46,7 +64,7 @@ header {
     padding: 0;
     font-size: 18px;
     font-weight: 800;
-    color: green;
+    color: #c28e74;
 }
 
 button {
@@ -54,7 +72,7 @@ button {
     height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(11, 114, 109);
+    background-color: #856ae7;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -92,7 +110,7 @@ button {
     padding: 8px 0 0 0; 
     font-size: 18px;
     font-weight: 800;
-    color: green;
+    color: #c28e74;
 }
 
 /* .dayLabelクラスが適用されていない.mealTimeLabelsの子div要素 */
@@ -109,7 +127,7 @@ button {
     height: 24px;
     font-size: 18px;
     font-weight: 800;
-    color: green;
+    color: #c28e74;
     margin: 8px 0;
 }
 
@@ -123,64 +141,20 @@ button {
     min-width: 0; /* Flex項目が縮小できるようにする */
 }
 
-/* #mondayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-flex: 1;
-}
-
-
-#tuesdayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-#wednesdayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-#thursdayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-#fridayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-#saturdayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-#sundayPlan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-} */
-
-
 /** 1日分のレシピが入っているやつ */
-/* TODO カードぽい見た目にする */
 .mealCard {
-    background-color: aquamarine;
-    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .16);
+    color: #212121;
+    text-decoration: none;    border-radius: 5px;
     padding: 8px 0;
     height: 100%;
+}
+
+.mealCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px #e2b2ce, 0 3px 6px #e2b2ce;
+    transition: all .5s;
 }
 
 .mealCard h3 {
